@@ -53,7 +53,7 @@ function doubled(){
 }
 function sell(){
    if(resInt2 >= 50){
-       alert("You've sold 50 resourses");
+       alert("You've sold 50 resources");
        resInt2 = resInt - 50
        resInt = resInt2
        monInt2 = monInt + 10
