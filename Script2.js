@@ -1,5 +1,5 @@
-alert("In version 3.0: \n -Added new style - SHOP! \n -Fixed bug with ENTER! \n -Edit X2 Resources production! \n -Added purchase of Resources! \n -Added link on official Discord!");
-//переменные
+alert("In version 3.0: \n- Added new style - SHOP! \n- Fixed bug with ENTER! \n- Edit X2 Resources production! \n- Added purchase of Resources! \n- Added link to official Discord!");
+//variables
 var resInt = 0
 var resInt2 = 0
 var resop = 1
@@ -16,7 +16,7 @@ var need_upgr = 2
 var doubl = 2
 var minus = 0.5
 var nul = 0
-//инфа
+//info
 function res(){
    resInt2 = resInt + resop
     resInt = resInt2;
@@ -33,9 +33,9 @@ function pop(){
     document.getElementById("pop").innerHTML =""+ popInt2 +"";
 }
 function Game(){
-  alert("WIP and about Game: \n -- \nAbout Game: \n | This is Clicker game | \n This is Game created only with JS, HTML and CSS languages! \n -- \nCreator: \n FFirtes \n -- \nProgrammer: \n FFirtes \n i_hz_cho_i \n -- \nWIP \n -Countries with their bonuses \n -Game Over \n -Saves \n -More upgrades");
+  alert("WIP and about Game: \n--\nAbout Game: \n | This is Clicker game | \n This is Game created only with JS, HTML and CSS languages! \n -- \nCreator: \n FFirtes \n -- \nProgrammers:\nFFirtes\ni_hz_cto_i\nThe Slaylord\n--\nWIP\n- Countries with their bonuses \n- Game Over \n- Saves \n- More upgrades");
 }
-//магазик
+//shop
 function doubled(){
     if(popInt2 >= need_upgr){
     popInt2 = popInt - need_upgr
@@ -43,38 +43,38 @@ function doubled(){
     resop = doubl
     doubl = doubl+2
     need_upgr = need_upgr*2
-    alert(`You upgrade production Resources \n Next lvl upgrade is ${doubl}X`);
+    alert(`You've upgraded resource production.\nNext lvl upgrade is ${doubl}X`);
     }
     else {
-        alert(`${need_upgr} People need to upgrade`)
+        alert(`${need_upgr} people needed to upgrade`)
     }
     document.getElementById("res").innerHTML = resInt2;
     document.getElementById("pop").innerHTML = popInt2;
 }
 function sell(){
    if(resInt2 >= 50){
-       alert("You sell 50 resourses");
+       alert("You've sold 50 resources");
        resInt2 = resInt - 50
        resInt = resInt2
        monInt2 = monInt + 10
        monInt = monInt2
    }
    else {
-       alert("You need resourses");
+       alert("You need more resources!");
    }
    document.getElementById("res").innerHTML = resInt2;
 document.getElementById("money").innerHTML = monInt2;
 }
 function buy(){
    if(monInt2 >= 10){
-       alert("You buy 25 Resourses");
+       alert("You've bought 25 resources");
        resInt2 = resInt + 25
        resInt = resInt2
        monInt2 = monInt - 10
        monInt = monInt2
    }
    else {
-       alert("You need 10 Money for Buy");
+       alert("You need 10 Money to buy resources!");
    }
    document.getElementById("res").innerHTML = resInt2;
 document.getElementById("money").innerHTML = monInt2;
@@ -85,10 +85,10 @@ if(resInt2 >= 100 && monInt2 >= 20){
     monInt2 -= 20
     popInt2 += 1
     domInt2 -= 3
-    alert("House is build!");
+    alert("House is built!");
     }
    else {
-        alert("You not build a house!") 
+        alert("You couldn't build a house!") 
     }
     document.getElementById("pop").innerHTML =""+ popInt2 +"";
     document.getElementById("money").innerHTML =""+ monInt2 +"";
@@ -105,7 +105,7 @@ function Give(){
     alert("Dominion is improved!");
     }
     else {
-        alert("You need 20 resourses and 20 money!")
+        alert("You need 20 resources and 20 money to improve dominion!")
     }
     document.getElementById("dom").innerHTML =""+ domInt2 +"";
     document.getElementById("money").innerHTML =""+ monInt2 +"";
@@ -114,7 +114,7 @@ function Give(){
 /*
 function People(){
   if(domInt2 <= 0){
-    alert("You lost! Your Dominion is" + domInt2 + "\n Your score is: \n Resourses: " + resInt2 + " \n Money: " + monInt2 + " \n Population: " + popInt2 + " \n Please restart the game.");
+    alert("You lost! Your Dominion is" + domInt2 + "\n Your score is: \n Resources: " + resInt2 + " \n Money: " + monInt2 + " \n Population: " + popInt2 + " \n Please restart the game.");
   }
 }
 */
