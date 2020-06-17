@@ -1,8 +1,13 @@
-alert("In version 3.0: \n- Added new style - SHOP! \n- Fixed bug with ENTER! \n- Edit X2 Resources production! \n- Added purchase of Resources! \n- Added link to official Discord!");
-//variables
-var resInt = 0
-var resInt2 = 0
-var resop = 1
+alert("In version 4.0:\n -Delete Resources, but added Stone, Wood, Food! \n -Added Points of Research! \n -Edit Shop!")
+var stoneInt2 = 0
+var stoneInt = 0
+var stoneop = 1
+var woodInt = 0
+var woodInt2 = 0
+var woodop = 1
+var foodInt = 0
+var foodInt2 = 0
+var foodop = 1
 var monInt = 0
 var monInt2 = 0
 var monop = 1
@@ -12,109 +17,123 @@ var popop = 1
 var domInt = 0
 var domInt2 = 1
 var domop = 1
+var resInt = 0
+var resInt2 = 0
+var resop = 1
 var need_upgr = 2
 var doubl = 2
-var minus = 0.5
-var nul = 0
-//info
-function res(){
-   resInt2 = resInt + resop
-    resInt = resInt2;
-    document.getElementById("res").innerHTML =""+ resInt2 +"";
+//инфа
+function stone() {
+  stoneInt2 = stoneInt + stoneop
+  stoneInt = stoneInt2;
+  document.getElementById("stone").innerHTML = ""+ stoneInt2 +"";
 }
-function money(){
-   monInt2 = monInt + monop
-    monInt = monInt2;
-    document.getElementById("money").innerHTML =""+ monInt2 +"";
+function wood() {
+  woodInt2 = woodInt + woodop
+  woodInt = woodInt2;
+  document.getElementById("wood").innerHTML = ""+ woodInt2 +"";
 }
-function pop(){
-   popInt2 = popInt + popop
-    popInt = popInt2;
-    document.getElementById("pop").innerHTML =""+ popInt2 +"";
+function food() {
+  foodInt2 = foodInt + foodop
+  foodInt = foodInt2;
+  document.getElementById("food").innerHTML = ""+ foodInt2 +"";
 }
-function Game(){
-  alert("WIP and about Game: \n--\nAbout Game: \n | This is Clicker game | \n This is Game created only with JS, HTML and CSS languages! \n -- \nCreator: \n FFirtes \n -- \nProgrammers:\nFFirtes\ni_hz_cto_i\nThe Slaylord\n--\nWIP\n- Countries with their bonuses \n- Game Over \n- Saves \n- More upgrades");
+function Game() {
+  alert("WIP and about Game:\n -- \nAbout Game: \n | This is Clicker game | \n This is Game created only with JS, HTML and CSS languages! \n -- \nCreator: \n FFirtes \n -- \nProgrammer: \n FFirtes \n i_hz_cho_i \n The Slaylord \n -- \nWIP \n -Countries with their bonuses \n -Game Over \n -Saves \n -More upgrades");
 }
-//shop
-function doubled(){
-    if(popInt2 >= need_upgr){
-    popInt2 = popInt - need_upgr
-    popInt = popInt2 
-    resop = doubl
-    doubl = doubl+2
-    need_upgr = need_upgr*2
-    alert(`You've upgraded resource production.\nNext lvl upgrade is ${doubl}X`);
-    }
-    else {
-        alert(`${need_upgr} people needed to upgrade`)
-    }
-    document.getElementById("res").innerHTML = resInt2;
-    document.getElementById("pop").innerHTML = popInt2;
-}
-function sell(){
-   if(resInt2 >= 50){
-       alert("You've sold 50 resources");
-       resInt2 = resInt - 50
-       resInt = resInt2
-       monInt2 = monInt + 10
-       monInt = monInt2
-   }
-   else {
-       alert("You need more resources!");
-   }
-   document.getElementById("res").innerHTML = resInt2;
-document.getElementById("money").innerHTML = monInt2;
-}
-function buy(){
-   if(monInt2 >= 10){
-       alert("You've bought 25 resources");
-       resInt2 = resInt + 25
-       resInt = resInt2
-       monInt2 = monInt - 10
-       monInt = monInt2
-   }
-   else {
-       alert("You need 10 Money to buy resources!");
-   }
-   document.getElementById("res").innerHTML = resInt2;
-document.getElementById("money").innerHTML = monInt2;
-}
-function build(){
-if(resInt2 >= 100 && monInt2 >= 20){
-    resInt2 -= 100
-    monInt2 -= 20
-    popInt2 += 1
-    domInt2 -= 3
-    alert("House is built!");
-    }
-   else {
-        alert("You couldn't build a house!") 
-    }
-    document.getElementById("pop").innerHTML =""+ popInt2 +"";
-    document.getElementById("money").innerHTML =""+ monInt2 +"";
-    document.getElementById("res").innerHTML =""+ resInt2 +"";
-    document.getElementById("dom").innerHTML =""+ domInt2 +"";
-}
-
-function Give(){
-	if(resInt2 >= 20 && monInt2 >= 20)
-    {
-    resInt2 -= 20
-    monInt2 -= 20
-    domInt2 += 1
-    alert("Dominion is improved!");
-    }
-    else {
-        alert("You need 20 resources and 20 money to improve dominion!")
-    }
-    document.getElementById("dom").innerHTML =""+ domInt2 +"";
-    document.getElementById("money").innerHTML =""+ monInt2 +"";
-    document.getElementById("res").innerHTML =""+ resInt2 +"";
-}
-/*
-function People(){
-  if(domInt2 <= 0){
-    alert("You lost! Your Dominion is" + domInt2 + "\n Your score is: \n Resources: " + resInt2 + " \n Money: " + monInt2 + " \n Population: " + popInt2 + " \n Please restart the game.");
+//магаз
+function SellStone() {
+  if (stoneInt2 >= 20) {
+    stoneInt2 = stoneInt - 20
+    stoneInt = stoneInt2
+    monInt2 = monInt + 1
+    monInt = monInt2
+    alert("You sell 20 Stone for 1 Money!")
+  } else {
+    alert("You need 20 Stone for sell!")
   }
+  document.getElementById("stone").innerHTML = "" + stoneInt2 + "";
+  document.getElementById("money").innerHTML = "" + monInt2 + "";
 }
-*/
+function SellWood() {
+  if (woodInt2 >= 30) {
+    woodInt2 = woodInt - 30
+    woodInt = woodInt2
+    monInt2 = monInt + 2
+    monInt = monInt2
+    alert("You sell 30 Wood for 2 Money!")
+  } else {
+    alert("You need 30 Wood for sell!")
+  }
+  document.getElementById("wood").innerHTML = "" + woodInt2 + "";
+  document.getElementById("money").innerHTML = "" + monInt2 + "";
+}
+function SellFood() {
+  if (foodInt2 >= 50) {
+    foodInt2 = foodInt - 50
+    foodInt = foodInt2
+    monInt2 = monInt + 5
+    monInt = monInt2
+    alert("You sell 50 Food for 5 Money!")
+  } else {
+    alert("You need 50 Food for sell!")
+  }
+  document.getElementById("food").innerHTML = "" + foodInt2 + "";
+  document.getElementById("money").innerHTML = "" + monInt2 + "";
+}
+function build() {
+  if (stoneInt2 >= 30 && woodInt2 >= 20 && foodInt2 >= 75) {
+    stoneInt2 = stoneInt - 30
+    stoneInt = stoneInt2
+    woodInt2 = woodInt - 20
+    woodInt = woodInt2
+    foodInt2 = foodInt - 75
+    foodInt = foodInt2
+    popInt2 = popInt + 1
+    popInt = popInt2
+    domInt2 = domInt - 2
+    domInt = domInt2
+    alert("You built a house!")
+  } else {
+    alert("You need 30 Stone, 20 Wood, 75 Food!")
+  }
+  document.getElementById("stone").innerHTML = "" + stoneInt2 + "";
+  document.getElementById("wood").innerHTML = "" + woodInt2 + "";
+  document.getElementById("food").innerHTML = "" + foodInt2 + "";
+  document.getElementById("pop").innerHTML = "" + popInt2 + "";
+  document.getElementById("dom").innerHTML = "" + domInt2 + "";
+}
+function Give() {
+  if (foodInt2 >= 50 && monInt2 >= 20) {
+    foodInt2 = foodInt - 50
+    foodInt = foodInt2
+    monInt2 = monInt - 20
+    monInt = monInt2
+    domInt2 = domInt + 5
+    domInt = domInt2
+    alert("You improve the Dominion!")
+  } else {
+    alert("You need 50 Food, 20 Meney!")
+  }
+  document.getElementById("food").innerHTML = "" + foodInt2 + "";
+  document.getElementById("money").innerHTML = "" + monInt2 + "";
+  document.getElementById("dom").innerHTML = "" + domInt2 + "";
+}
+function Points() {
+	if(foodInt2 >= 100 && woodInt2 >= 40 && stoneInt2 >= 10){
+		foodInt2 = foodInt - 100
+		foodInt = foodInt2
+		woodInt2 = woodInt - 40
+		woodInt = woodInt2
+		stoneInt2 = stoneInt - 10
+		resInt2 = resInt + 3
+       alert("You Research the world!");
+	}
+     else{
+		 alert("You need 100 Food, 40 Wood, 10 Stone for Research the world!")
+	 }
+	 document.getElementById("stone").innerHTML = "" + stoneInt2 + "";
+  document.getElementById("wood").innerHTML = "" + woodInt2 + "";
+  document.getElementById("food").innerHTML = "" + foodInt2 + "";
+  document.getElementById("point").innerHTML = "" + resInt2 + "";
+}

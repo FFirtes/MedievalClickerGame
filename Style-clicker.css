@@ -7,7 +7,7 @@ h2 {
     margin-left:25%;
     margin-right:25%;#00ccff
 }
-#Res  {
+#Stone  {
     color: #879ca1;
     text-shadow: 2px 4px 6px;
     padding: 10px;
@@ -15,6 +15,24 @@ h2 {
     border-radius:10px;
     margin-left:25%;
     margin-right:25%;#879ca1
+}
+#Wood  {
+    color: #532222;
+    text-shadow: 2px 4px 6px;
+    padding: 10px;
+    border: 3px #532222;
+    border-radius:10px;
+    margin-left:25%;
+    margin-right:25%;532222
+}
+#Food  {
+    color: #e2ab88;
+    text-shadow: 2px 4px 6px;
+    padding: 10px;
+    border: 3px #e2ab88;
+    border-radius:10px;
+    margin-left:25%;
+    margin-right:25%;#e2ab88
 }
 #Money  {
     color: #e3ee21;
@@ -42,6 +60,15 @@ h2 {
     border-radius:10px;
     margin-left:25%;
     margin-right:25%;#f90000
+}
+#Point  {
+    color: #3f8c9f;
+    text-shadow: 2px 4px 6px;
+    padding: 10px;
+    border: 3px #3f8c9f;
+    border-radius:10px;
+    margin-left:25%;
+    margin-right:25%;#3f8c9f
 }
 #Game{
   height: 1px;
@@ -80,29 +107,12 @@ input {
     color: #336666;
     border-radius: 9px;
 }
-@keyframes anim{
-    50%{background-color: blue;};
-    100%{background-color:#73FFE8;}
-}
-#madeby{
-    background-color: ;
-    color: white;
-    width: 105%;
-    margin-left: -10px;
-}
 h4 {
     color: #ccffcc;
     text-align: center;
 }
-#eror {
-    color:black;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-}
-#dada {
-    text-align: center;
-}
 input :hover{
+  
     font-size:300pt;
 }
 button {
@@ -120,4 +130,3 @@ h3 {
 a {
   color: #1e2463;
 }
-p 

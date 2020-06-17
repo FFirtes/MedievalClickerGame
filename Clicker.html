@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mini Clicker</title>
+        <title>Medieval Clicker Game</title>
            <script src="Script2.js"></script>
             <link rel="stylesheet" href="Style-clicker.css">
 <audio src="bgm2.mp3" autoplay="autoplay"></audio>
    </head>
     <body>
             <i>
-              <font color="red"><p onClick="Game()">Clicker Game. Version 3.0</font></p>
+              <font color="red"><p onClick="Game()">Clicker Game. Version 4.0</font></p>
             <form  align="center">
-        <h2 id="Res">Resources</h2>
-        <h1 id="res">0</h1>
-        <input type="button" onmousedown="res()" value="Get Resources">
+        <h2 id="Stone">Stone</h2>
+        <h1 id="stone">0</h1>
+        <input type="button" onmousedown="stone()" value="Get Stone">
+        <br>
+        <br>
+        </form>
+           <form  align="center">
+        <h2 id="Wood">Wood</h2>
+        <h1 id="wood">0</h1>
+        <input type="button" onmousedown="wood()" value="Get Wood">
+        <br>
+        <br>
+        </form>
+           <form  align="center">
+        <h2 id="Food">Food</h2>
+        <h1 id="food">0</h1>
+        <input type="button" onmousedown="food()" value="Get Food">
         <br>
         <br>
         </form>
@@ -25,7 +39,6 @@
    <br>
   </form>
   
- </html>
 <form align="center">
  <h2 id="Pop">Population</h2>
   <h1 id="pop">0</h1>
@@ -35,7 +48,13 @@
  
  <form align="center">
      <h2 id="Dom">Dominion</h2>
-     <h1 id="dom">1</h1>
+     <h1 id="dom">0</h1>
+     <br><br>
+     </form>
+     
+      <form align="center">
+     <h2 id="Point">Points of research</h2>
+     <h1 id="point">0</h1>
      <br><br>
      </form>
    
@@ -49,53 +68,49 @@
  
 <h1 align = center id="Shop"><i><font color = orange>SHOP</font></i></h1>
 
+      <form  align="center">
+        <h2>Sell Stone</h2>
+        <h3>20 Stone = 1 Money</h3>
+        <input type="button" onClick="SellStone()" value="Sell Stone">
+        </form>
+        <hr font color = purple>
 
-     <form align="center">
-  <h1></h1>
-  <h2 align = center> X2 Resource production </h2>
-  <h3 align = center> Upgrade = 2 People, every upgrade fee is doubled! </h3>
-  <input type="button" onClick="doubled()" value= "Upgrade" >
-  </form>
-  
-  
-  <hr font color = purple>
-  
-  
-    <form align="center">
-  <h2> Sell Resources </h2>
-  <h3> Sell 50 Resources for 10 Money </h3>
-  <input type="button" onClick="sell()" value="Sell">
-  </form>
-  
-    <hr font color = purple>
-    
-    <form align="center">
-
-  <h2> Buy Resources </h2>
-
-  <h3> Buy 25 Resources for 10 Money </h3>
-  <input type="button" onClick="buy()" value="Buy">
-  </form>
-  
-    <hr font color = purple>
-   
-     <form align="center">
-
+              <form  align="center">
+        <h2>Sell Wood</h2>
+        <h3>30 Wood = 2 Money</h3>
+        <input type="button" onClick="SellWood()" value="Sell Wood">
+        </form>
+        <hr font color = purple>
+        
+              <form  align="center">
+        <h2>Sell Food</h2>
+        <h3>50 Food = 5 Money</h3>
+        <input type="button" onClick="SellFood()" value="Sell Food">
+        </form>
+        <hr font color = purple>
+        
+  <form align="center">
   <h2> Create People </h2>
 
-  <h3>100 Resources and 20 Money = 1 Person </h3>
+  <h3> 20 Wood, 30 Stone, 75 Food = 1 People </h3>
   <input type="button" onClick="build()" value="Build">
   </form>
   
    <hr font color = purple>
  
      <form align="center">
-
   <h2> Improve the Dominion </h2>
-
-  <h3>20 Resources and 20 Money = 1 Dominion</h3>
+  <h3>50 Food and 20 Money = 5 Dominion</h3>
   <input type="button" onClick="Give()" value="Improve">
   </form>
+          <hr font color = purple>
+  
+        <form  align="center">
+        <h2>Research the world</h2>
+        <h3>100 Food, 40 Wood, 10 Stone = 3 Points of research</h3>
+        <input type="button" onClick="Points()" value="Research">
+        </form>
+
    
    <hr
    font color = yellow
@@ -105,6 +120,6 @@
    >
    </i>
    <form align="right">
-   <a href="https://discord.gg/DcetVsa">Discord</a></form>
+   <a href="https://discord.gg/DcetVsa"><img src="Discord.png" height="50" width="50"></a></form>
    </body>
    </html>
