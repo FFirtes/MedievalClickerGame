@@ -5,11 +5,11 @@ alert("In version 1.6.0:\n -New interface!");
 //vars
 
 var  stoneInf = 0
-var stoneOp = 100
+var stoneOp = 1
 var woodInf  = 0
-var woodOp = 100
+var woodOp = 1
 var foodInf = 0
-var foodOp = 100
+var foodOp = 1
 var moneyInf = 0
 var populationInf = 0
 var dominionInf = 3
