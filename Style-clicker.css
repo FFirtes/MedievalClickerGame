@@ -1,97 +1,28 @@
-h2 {
-    color: #00f7ff;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-    border: 3px solid blue;
-    border-radius:10px;
-    margin-left:25%;
-    margin-right:25%;#00ccff
+input {
+	height: 50px;
+	width: 77px;
+	color: #95a5a6;
 }
-#Stone  {
-    color: #879ca1;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-    border: 3px #879ca1;
-    border-radius:10px;
-    margin-left:25%;
-    margin-right:25%;#879ca1
+#stoneButton{
+	background-color: #566573;
 }
-#Wood  {
-    color: #532222;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-    border: 3px #532222;
-    border-radius:10px;
-    margin-left:25%;
-    margin-right:25%;532222
+#woodButton{
+	background-color: #6e2c00;
 }
-#Food  {
-    color: #e2ab88;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-    border: 3px #e2ab88;
-    border-radius:10px;
-    margin-left:25%;
-    margin-right:25%;#e2ab88
+#foodButton{
+	background-color: #c36241;
 }
-#Money  {
-    color: #e3ee21;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-    border: 3px #e3ee21;
-    border-radius:10px;
-    margin-left:25%;
-    margin-right:25%;#e3ee21
+tr{
+	width: 156px;
 }
-#Pop  {
-    color: #34ab1b;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-    border: 3px #34ab1b;
-    border-radius:10px;
-    margin-left:25%;
-    margin-right:25%;#34ab1b
+input.shopButtons{
+	background-color: #336666; 
 }
-#Dom  {
-    color: #f90000;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-    border: 3px #f90000;
-    border-radius:10px;
-    margin-left:25%;
-    margin-right:25%;#f90000
+#shopButton{
+	background-color: #336666; 
 }
-#Point  {
-    color: #3f8c9f;
-    text-shadow: 2px 4px 6px;
-    padding: 10px;
-    border: 3px #3f8c9f;
-    border-radius:10px;
-    margin-left:25%;
-    margin-right:25%;#3f8c9f
-}
-#Game{
-  height: 1px;
-  width: 1px;
-  background-color: #00ccff00;
-  color: #00ccff00;
-    border:1px #00ccff00;
-    border-radius: 7px;
-    box-shadow: 0 0 5px, inset 0 0 25px;
-    padding: 10px 40px;
-    background-color: #00ccff00;
-    font-weight: bold;
-    outline-style: none;
-}
-#Shop{
-  text-shadow: 2px 4px 6px;
-}
-h1{
-  color: #ece580;
-  text-shadow: 2px 4px 6px;
-}
-html {
-    background-image: url(Fon2.png);
+html{
+	background-image: url(Fon2.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -100,33 +31,20 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
-input {
-    text-align: center;
-    font-size: 23pt;
-    background-color: #999999;
-    color: #336666;
-    border-radius: 9px;
+p.info{
+	opacity: 0.7;
+	background-color: #46c7c7;
 }
-h4 {
-    color: #ccffcc;
-    text-align: center;
-}
-input :hover{
-  
-    font-size:300pt;
-}
-button {
-    border:1px black;
-    border-radius: 7px;
-    box-shadow: 0 0 5px, inset 0 0 25px;
-    padding: 10px 40px;
-    background-color: black;
-    font-weight: bold;
-    outline-style: none;
-}
-h3 {
-    color: #32b1d9;
-}
-a {
-  color: #1e2463;
+.i:hover::after { 
+    content: attr(data-title); 
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; bottom: 5px; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    background: silver; /* Полупрозрачный цвет фона */
+    color: #336666; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    font-family: Segoe UI Semibold, sans-serif; /* Гарнитура шрифта */
+    font-size: 20px; /* Размер текста подсказки */
+    padding: 5px 10px; /* Поля */
+   }
 }
