@@ -1,6 +1,6 @@
 //about new version
 
-alert("In version 1.6.0:\n -New interface!");
+alert("In version 1.6.1:\n -Bug fixed");
 
 //vars
 
@@ -98,9 +98,9 @@ function SellFood() {
   if (foodInf >= 50) {
     foodInf = foodInf - 50
     moneyInf = moneyInf + 5
-    alert("You sell 50 Wood for 5 Money!")
+    alert("You sell 50 Food for 5 Money!")
   } else {
-    alert("You need 50 Wood for sell!")
+    alert("You need 50 Food for sell!")
   }
   document.getElementById("food").innerHTML = "" + foodInf + "";
   document.getElementById("money").innerHTML = "" + moneyInf + "";
